@@ -1,24 +1,15 @@
-
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Calculadora PHP</title>
-	</head>
-	<body>
-		<h1>Calculadora</h1>
-		<form action="resultado.php" method="post">
-			<select name="operador">
-				<option value="suma">Suma</option>
-				<option value="resta">Resta</option>
-				<option value="multiplicacion">Multiplicaci&oacute;n</option>
-				<option value="division">Divisi&oacute;n</option>
-			</select><br />
-			Ingresa tu primer numero:<br />
-			<input type="text" name="valor1"><br />
-			Ingresa tu segundo numero:<br />
-			<input type="text" name="valor2"><br>
-			<input type="reset" value="Borrar">
-			<input type="submit" value="Enviar">
-		</form>
-	</body>
+<head>
+    <title>Calculadora SOAP</title>
+</head>
+<body>
+    <h2>Calculadora SOAP</h2>
+    <form method="POST" action="resultado.php">
+        Número 1: <input type="text" name="num1"><br>
+        Número 2: <input type="text" name="num2"><br>
+        Operación (+, -, *, /): <input type="text" name="operacion"><br>
+        <input type="submit" value="Calcular">
+    </form>
+</body>
 </html>

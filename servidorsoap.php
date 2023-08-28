@@ -1,27 +1,23 @@
 <?php
-
-class calculadora{
-    public function suma($valor1,$valor2)
-    {
-        return $valor1+$valor2;
+class Calculadora {
+    public function calcular($num1, $num2, $operacion) {
+        switch ($operacion) {
+            case '+':
+                return $num1 + $num2;
+            case '-':
+                return $num1 - $num2;
+            case '*':
+                return $num1 * $num2;
+            case '/':
+                return $num1 / $num2;
+            default:
+                return "Operación no válida";
+        }
     }
-    public function resta($valor1,$valor2)
-    {
-        return $valor1-$valor2;
-    }
-    public function multiplicacion($valor1,$valor2)
-    {
-        return $valor1*$valor2;
-    }
-    public function division($valor1,$valor2)
-    {
-        return $valor1/$valor2;
-    }
-
 }
-$options= array('uri'=>'http://localhost/calculadora');
-$server=new SoapServer('calculadorawsdl.wsdl',$options);
-$server->setClass('calculadora');
-$server->handle();
 
+$server = new SoapServer('calculadorawsdl.wsdl');
+$server->setClass('Calculadora');
+$server->handle();
 ?>
+
