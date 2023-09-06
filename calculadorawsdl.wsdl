@@ -25,7 +25,7 @@
     <binding name="CalculadoraBinding" type="tns:CalculadoraPortType">
         <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
         <operation name="calcular">
-            <soap:operation soapAction="http://localhost/calculadora/#calcular"/>
+            <soap:operation soapAction="http://localhost/calculadora/calcular"/>
             <input>
                 <soap:body use="encoded" namespace="http://localhost/calculadora/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
             </input>
